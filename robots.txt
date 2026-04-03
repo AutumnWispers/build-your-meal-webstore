@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bymwebstore.netlify.app/sitemap.xml
