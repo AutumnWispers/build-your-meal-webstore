@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meal Builder — BUILD YOUR MEAL</title>
+  <title>Meal Builder — Customize Your Pizza or Burger | Build Your Meal</title>
+  <meta name="description"
+    content="Use the Build Your Meal builder to craft your perfect custom pizza or burger. Choose your base, stack toppings, add a drink — price updates live as you build." />
+  <meta name="keywords"
+    content="meal builder, build your meal, custom pizza builder, burger customizer, food ordering, toppings, restaurant webstore" />
+  <meta name="author" content="BuildMeal" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Meal Builder — Customize Your Own Pizza or Burger" />
+  <meta property="og:description"
+    content="Pick a base, stack toppings, add a drink. Build your perfect custom meal and order online with live price updates." />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
   <!-- ========== NAVBAR ========== -->
-  <nav class="navbar">
-    <a href="index.html" class="nav-logo">BUILD<span>MEAL</span></a>
-    <ul class="nav-links" id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="builder.html">Builder</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="cart.html" class="nav-cart">
-      🛒 CART
-      <span class="cart-count">0</span>
-    </a>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">BUILD<span>MEAL</span></a>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="builder.html">Builder</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="cart.html" class="nav-cart">
+        🛒 CART
+        <span class="cart-count">0</span>
+      </a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
 
   <!-- ========== PAGE HERO ========== -->
-  <div class="page-hero">
+  <section class="page-hero" aria-label="Meal builder page header">
     <h1>MEAL <span>BUILDER</span></h1>
-    <p>Craft your perfect meal step by step. Price updates live as you build.</p>
-  </div>
+    <p>Craft your perfect custom pizza or burger, step by step. Price updates live as you build.</p>
+  </section>
 
   <!-- ========== BUILDER LAYOUT ========== -->
   <main style="max-width:1300px; margin:0 auto; padding:3rem 2rem;">
@@ -47,7 +61,8 @@
             <span class="step-num">01</span>
           </div>
           <div class="builder-section-body">
-            <p style="font-family:var(--font-mono);font-size:0.8rem;color:#666;margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:1px;">
+            <p
+              style="font-family:var(--font-mono);font-size:0.8rem;color:#666;margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:1px;">
               Select a pizza or burger to start building your meal
             </p>
             <!-- Base item cards injected by JS -->
@@ -66,7 +81,8 @@
             <span class="step-num">02</span>
           </div>
           <div class="builder-section-body">
-            <p style="font-family:var(--font-mono);font-size:0.8rem;color:#666;margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:1px;">
+            <p
+              style="font-family:var(--font-mono);font-size:0.8rem;color:#666;margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:1px;">
               Tap to toggle toppings. Price updates in real-time.
             </p>
             <!-- Toppings grid injected by JS -->
@@ -81,7 +97,8 @@
             <span class="step-num">03</span>
           </div>
           <div class="builder-section-body">
-            <p style="font-family:var(--font-mono);font-size:0.8rem;color:#666;margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:1px;">
+            <p
+              style="font-family:var(--font-mono);font-size:0.8rem;color:#666;margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:1px;">
               Optional — pair your meal with a refreshing drink
             </p>
             <!-- Drinks grid injected by JS -->
@@ -95,7 +112,8 @@
       <div class="order-summary">
         <div class="order-summary-header">
           <h3>YOUR ORDER</h3>
-          <p style="font-family:var(--font-mono);font-size:0.75rem;color:rgba(255,255,255,0.7);margin-top:0.25rem;text-transform:uppercase;letter-spacing:1px;">
+          <p
+            style="font-family:var(--font-mono);font-size:0.75rem;color:rgba(255,255,255,0.7);margin-top:0.25rem;text-transform:uppercase;letter-spacing:1px;">
             Updates as you build
           </p>
         </div>
@@ -113,17 +131,13 @@
           </div>
 
           <!-- Add to Cart button -->
-          <button
-            class="btn btn-pink btn-block btn-lg"
-            id="builderAddToCart"
-            disabled
-            aria-label="Add meal to cart"
-          >
+          <button class="btn btn-pink btn-block btn-lg" id="builderAddToCart" disabled aria-label="Add meal to cart">
             ADD TO CART 🛒
           </button>
 
           <!-- Info -->
-          <p style="font-family:var(--font-mono);font-size:0.7rem;color:#888;text-align:center;margin-top:1rem;text-transform:uppercase;letter-spacing:0.5px;">
+          <p
+            style="font-family:var(--font-mono);font-size:0.7rem;color:#888;text-align:center;margin-top:1rem;text-transform:uppercase;letter-spacing:0.5px;">
             * Price shown excludes tax & delivery
           </p>
 
@@ -165,10 +179,11 @@
     </div>
     <div class="footer-bottom">
       <p>© 2025 BUILDMEAL™ — All rights reserved.</p>
-      <p>Made with ❤️ and JavaScript</p>
+      <p>Made by Samruddha Belsare with ❤️ and JavaScript</p>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
