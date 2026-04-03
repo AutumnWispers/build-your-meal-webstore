@@ -60,7 +60,14 @@ function showToast(message, type = '') {
  * @returns {string}
  */
 function getCurrentPage() {
-  return window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname;
+
+  if (path.includes('builder')) return 'builder.html';
+  if (path.includes('menu')) return 'menu.html';
+  if (path.includes('cart')) return 'cart.html';
+  if (path.includes('contact')) return 'contact.html';
+
+  return 'index.html';
 }
 
 /* ============================================================
