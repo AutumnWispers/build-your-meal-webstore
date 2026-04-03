@@ -1,4 +1,4 @@
-# 🍽️ Build Your Meal – Smart Restaurant WebStore
+#  Build Your Meal – Smart Restaurant WebStore
 
 A modern, interactive restaurant web application where users can **customize their meals** (pizza/burger), select toppings and drinks, and see **real-time price updates**.
 
@@ -8,8 +8,8 @@ Designed with a **Neo-Brutalism UI** and powered by **vanilla JavaScript**, this
 
 ## 🚀 Live Demo
 
-👉 Add your deployed link here (GitHub Pages)
-Example: https://yourusername.github.io/build-your-meal-webstore
+👉 deployed link  (Netlify)
+[BYM Webstore](https://bymwebstore.netlify.app/)
 
 ---
 
