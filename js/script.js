@@ -138,13 +138,27 @@ function updateCartBadge() {
  */
 async function fetchMenuData() {
   try {
-    const response = await fetch('data/menu.json');
-    if (!response.ok) throw new Error('Failed to load menu data');
+    const response = await fetch('/data/menu.json');
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
     const data = await response.json();
-    STATE.menuData = data.items;
-    return data.items;
+
+    console.log("🔥 RAW DATA:", data);
+
+    // ✅ FIX: supports both formats
+    const items = data.items || data;
+
+    STATE.menuData = items;
+
+    console.log("✅ FINAL ITEMS:", items);
+
+    return items;
+
   } catch (error) {
-    console.error('Error fetching menu:', error);
+    console.error('❌ Error fetching menu:', error);
     showToast('Failed to load menu data.', 'error');
     return [];
   }
